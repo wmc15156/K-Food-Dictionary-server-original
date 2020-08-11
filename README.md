@@ -13,36 +13,6 @@
 
 # 💡 About 
 
-## Getting Started
-
-**Using npm** :
-
-1. 이 repository를 **다운로드** or **Git Clone**받으십시오.
-
-2. 상위 디렉토리/server/client 폴더에 각각 인스톨을 하십시오.
-
-   ```
-   $ npm install
-   ```
-
-3. server/client를 각각 실행하십시오.
-
-   1. Server-side
-
-      ```
-      $ npm run server-start
-      ```
-
-   2. Client-side
-
-      ```
-      $ npm start
-      ```
-
-   or
-
-url : **http://hwabaek.s3-website.ap-northeast-2.amazonaws.com** 에서 사용하십시오.
-
 ## About Service  
    1. 로그인 / 로그아웃 / 회원가입
       - 로그인
