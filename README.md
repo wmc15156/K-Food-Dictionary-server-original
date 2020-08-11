@@ -39,7 +39,7 @@
    <details>
    <summary>기능 플로우 펼쳐보기</summary>
    <div markdown="1">
-     <img src="기능플로우.jpg" />
+     <img src="기능플로우.jpg">
    </div>
    </details> 
 
