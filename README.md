@@ -85,4 +85,30 @@
    -   React-Hooks
    -   SASS
    -   Styled-Component
+# 🎨 About Team
 
+## 🌿 이호철
+**Team Leader, FrontEnd**  
+📧 Gmail :amiosae@gmail.com
+🆔 Github Id : @samiosae  
+💡 Blog : https://seagull-dev.tistory.com/ 
+
+## 🌿 유호현
+**Team members, FrontEnd**  
+📧 Gmail : bbirds94@gmail.com
+🆔 Github Id :@bbirds94
+💡 Blog : https://velog.io/@bbirds94
+   
+
+## 🌿 김현진
+**Team members, BackEnd**  
+📧 Gmail : wmc151567@gmail.com 
+🆔 Github Id : @wmc15156
+💡 Blog :https://velog.io/@wmc1415
+
+
+## 🌿 김유현
+**Team members, BackEnd**  
+📧 Gmail :cocokiuuu1858@gmail.com
+🆔 Github Id : @rladbgus
+💡 Blog :https://yoohyeon.tistory.com/
