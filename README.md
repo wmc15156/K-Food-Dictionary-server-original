@@ -35,7 +35,15 @@
    7. 맛집 리스트 불러오기
       - 해당하는 음식의 맛집들을 볼 수 있다.
    
-  
+ ## Flow Chart
+   <details>
+   <summary>기능 플로우 펼쳐보기</summary>
+   <div markdown="1">
+
+   ![](https://user-images.githubusercontent.com/59815596/86088603-9f39e180-bae1-11ea-9583-6ba707aacdc2.png)
+
+   </div>
+   </details> 
 
 
 
