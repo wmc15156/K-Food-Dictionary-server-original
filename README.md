@@ -46,8 +46,14 @@
 ## 🎨 Server
 
 ### :sparkles: API DOCS
-하단의 하이퍼링크를 클릭하시면 API DOCS로 연결됩니다.   
-<a href="https://user-images.githubusercontent.com/60249156/89888641-3fb81100-dc0b-11ea-84de-2c1bbd27a4b6.png">색갈피 API DOCS</a>
+  <details>
+   <summary>API DOCS 문서</summary>
+   <div markdown="3">
+     <img src="https://user-images.githubusercontent.com/60249156/89889832-4d6e9600-dc0d-11ea-8db5-9beefc9ce151.png">
+     <img src="https://user-images.githubusercontent.com/60249156/89889837-50698680-dc0d-11ea-8f87-2058786bd127.png">
+     <img src="https://user-images.githubusercontent.com/60249156/89889840-519ab380-dc0d-11ea-99bc-b074971690ab.png">
+   </div>
+   </details> 
 
 
 ### 📦 Dependencies
@@ -88,39 +94,30 @@
 # 🎨 About Team
 
 ## 🌿 이호철
-**Team Leader, FrontEnd** 
-
+**Team Leader, FrontEnd**  
 📧 Gmail :amiosae@gmail.com
-
 🆔 Github Id : @samiosae  
-
 💡 Blog : https://seagull-dev.tistory.com/ 
 
 ## 🌿 유호현
 **Team members, FrontEnd**  
-
 📧 Gmail : bbirds94@gmail.com
-
 🆔 Github Id :@bbirds94
-
 💡 Blog : https://velog.io/@bbirds94
    
 
 ## 🌿 김현진
 **Team members, BackEnd**  
-
-📧 Gmail : wmc151567@gmail.com
-
+📧 Gmail : wmc151567@gmail.com 
 🆔 Github Id : @wmc15156
-
 💡 Blog :https://velog.io/@wmc1415
 
 
 ## 🌿 김유현
 **Team members, BackEnd**  
-
 📧 Gmail :cocokiuuu1858@gmail.com
-
 🆔 Github Id : @rladbgus
-
 💡 Blog :https://yoohyeon.tistory.com/
+
+
+
