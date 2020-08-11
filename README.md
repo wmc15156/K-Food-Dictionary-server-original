@@ -43,7 +43,28 @@
    </div>
    </details> 
 
+## 🎨 Server
+
+### :sparkles: API DOCS
+하단의 하이퍼링크를 클릭하시면 API DOCS로 연결됩니다.   
+<a href="https://user-images.githubusercontent.com/60249156/89888641-3fb81100-dc0b-11ea-84de-2c1bbd27a4b6.png">색갈피 API DOCS</a>
 
 
+### 📦 Dependencies
 
+   -   mysql2 
+   -   sequelize
+   -   sequelize-cli
+   -   express
+   -   express-session
+   -   cors
+   -   cookie parser
+   -   dotenv
+   -   crypto
+
+## 🗃 Schema
+
+<div>
+<img width="500" src="https://user-images.githubusercontent.com/60249156/89888641-3fb81100-dc0b-11ea-84de-2c1bbd27a4b6.png">
+</div>
 
