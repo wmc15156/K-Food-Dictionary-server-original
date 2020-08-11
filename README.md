@@ -40,7 +40,6 @@
    <summary>기능 플로우 펼쳐보기</summary>
    <div markdown="1">
 
-   ![](https://user-images.githubusercontent.com/59815596/86088603-9f39e180-bae1-11ea-9583-6ba707aacdc2.png)
 
    </div>
    </details> 
