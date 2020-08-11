@@ -72,10 +72,12 @@
    -   crypto
 
 ## 🗃 Schema
-
-<div>
+   <details>
+   <summary>스키마 펼쳐보기</summary>
+   <div markdown="1">
 <img width="500" src="https://user-images.githubusercontent.com/60249156/89888641-3fb81100-dc0b-11ea-84de-2c1bbd27a4b6.png">
-</div>
+   </div>
+   </details> 
 
 ## 🎨 Client
 
