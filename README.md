@@ -101,7 +101,7 @@
 ## 🌿 이호철
 **Team Leader, FrontEnd**  
 
-📧 Gmail :amiosae@gmail.com
+📧 Gmail :samiosae@gmail.com
 
 🆔 Github Id : @samiosae  
 
