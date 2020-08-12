@@ -101,9 +101,9 @@
    -   짜증내지 말기.
    -   회의 도중 전화가 오면 양해구하기.
    -   모든 코드는 병합 전 리뷰를 받기.
-   -   커밋 메시지는 https://blog.ull.im/engineering/2019/03/10/logs-on-git.html 규칙 따르기.
-   -   Lint Rule - "eslint:recommended" Rule 따르기
-   -   Node 버전 - NVM v.12   
+   -   커밋 메시지는 "https://blog.ull.im/engineering/2019/03/10/logs-on-git.html" 규칙 따르기.
+   -   Lint Rule - "eslint:recommended" Rule 따르기.
+   -   Node 버전 - NVM v.12 사용하기.
    
    
 # 🎨 About Team
