@@ -27,5 +27,5 @@ app.post('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`${PORT}번포트에 연결됨!`);
+  console.log(`${PORT}번포트에 연결됨`);
 });
