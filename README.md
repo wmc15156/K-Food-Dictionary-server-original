@@ -39,9 +39,9 @@
       - 해당하는 음식의 맛집들을 볼 수 있다.
    
  ## Flow Chart
-   <details>
+   <div>
      <img src="https://user-images.githubusercontent.com/59912499/89887350-0ed6dc80-dc09-11ea-8642-3d321f8da8b2.png">
-   </details> 
+   </div> 
 
 ## 🎨 Server
 
