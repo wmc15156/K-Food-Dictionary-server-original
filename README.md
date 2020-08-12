@@ -72,6 +72,15 @@
    <div>
 <img width="500" src="https://user-images.githubusercontent.com/60249156/90013882-18cc0e80-dce1-11ea-8afc-38dab1cd11b1.png">
    </div>
+## 🗃 Schema 테이블 구조
+    <details>
+   <summary>테이블 구조 </summary>
+   <div markdown="3">
+     <img src="https://user-images.githubusercontent.com/60249156/90020441-d7406100-dcea-11ea-86e9-abf59e8d3a91.png">
+     <img src="https://user-images.githubusercontent.com/60249156/90020655-17074880-dceb-11ea-8b92-ebd6e4e367b6.png">
+     <img src="https://user-images.githubusercontent.com/60249156/90020979-972dae00-dceb-11ea-8286-7bf545ffac13.png">
+   </div>
+   </details> 
 
 ## 🎨 Client
 
