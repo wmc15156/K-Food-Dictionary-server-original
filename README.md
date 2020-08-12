@@ -70,7 +70,7 @@
 
 ## 🗃 Schema
    <div>
-<img width="500" src="https://user-images.githubusercontent.com/60249156/89888641-3fb81100-dc0b-11ea-84de-2c1bbd27a4b6.png">
+<img width="500" src="https://user-images.githubusercontent.com/60249156/90013882-18cc0e80-dce1-11ea-8afc-38dab1cd11b1.png">
    </div>
 
 ## 🎨 Client
