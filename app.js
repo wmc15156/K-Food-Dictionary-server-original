@@ -4,12 +4,10 @@ const cors = require('cors');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-
 const app = express();
 const PORT = 5000;
 
 dotenv.config();
-console.log(process.env.SESSION_SECRET_KEY, '222222');
 
 app.use(cors());
 app.use(cookieParser(process.env.SESSION_SECRET_KEY));
@@ -22,9 +20,8 @@ app.use(logger());
 app.use(express.json()); // body-parser역할
 app.use(express.urlencoded({ extended: false }));
 
-app.post('/', (req, res) => {
-  console.log(req.body, '22222');
-  res.end();
+app.get('/', (req, res) => {
+  res.send('hello world');
 });
 
 app.listen(PORT, () => {
