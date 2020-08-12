@@ -40,10 +40,8 @@
    
  ## Flow Chart
    <details>
-   <summary>기능 플로우 펼쳐보기</summary>
-   <div markdown="1">
+   <summary>기능 플로우</summary>
      <img src="https://user-images.githubusercontent.com/59912499/89887350-0ed6dc80-dc09-11ea-8642-3d321f8da8b2.png">
-   </div>
    </details> 
 
 ## 🎨 Server
