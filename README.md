@@ -90,6 +90,22 @@
    -   React-Hooks
    -   SASS
    -   Styled-Component
+   
+   
+# 🎨 Team rules
+   -   Stand Up Meeting 필수 참석하기. (매일 10시~10시30분)
+   -   잠은 꼭 6시간 이상 자기. (제정신으로 코딩하기)
+   -   밥은 하루 2끼 이상 챙겨 먹기.(체력 유지하기)
+   -   따뜻하게 말하기.
+   -   1시간 이상 막혔을 때 바로 공유하기.
+   -   짜증내지 말기.
+   -   회의 도중 전화가 오면 양해구하기.
+   -   모든 코드는 병합 전 리뷰를 받기.
+   -   커밋 메시지는 https://blog.ull.im/engineering/2019/03/10/logs-on-git.html 규칙 따르기.
+   -   Lint Rule - "eslint:recommended" Rule 따르기
+   -   Node 버전 - NVM v.12   
+   
+   
 # 🎨 About Team
 
 ## 🌿 이호철
