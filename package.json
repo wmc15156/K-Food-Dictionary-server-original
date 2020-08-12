@@ -1,0 +1,39 @@
+{
+  "name": "k-food-dictionary-server",
+  "version": "1.0.0",
+  "description": "<a href=\"https://gitmoji.carloscuesta.me\"> <img src=\"https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square\" alt=\"Gitmoji?style=flat-square&logo=appveyor\"> </a> <a href=\"https://github.com/codestates/Saekgalpi-ColorPalette\"><img src =\"https://img.shields.io/badge/github-kFood-lightgrey?style=flat-square&logo=appveyor\"></a> <img src=\"https://img.shields.io/badge/npm-v6.14.4-important?style=flat-square&logo=appveyor\"> <img src=\"https://img.shields.io/badge/node.js-v12.16.11-important?style=flat-square&logo=appveyor\">",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wmc15156/K-Food-Dictionary-server.git"
+  },
+  "author": "kfood",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wmc15156/K-Food-Dictionary-server/issues"
+  },
+  "homepage": "https://github.com/wmc15156/K-Food-Dictionary-server#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.1.0",
+    "sequelize": "^6.3.4"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.6.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.5",
+    "nodemon": "^2.0.4",
+    "sequelize-cli": "^6.2.0"
+  }
+}
