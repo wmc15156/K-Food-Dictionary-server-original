@@ -1,5 +1,6 @@
 const { User } = require('../../models');
 const dotenv = require('dotenv');
+const crypto = require('crypto');
 
 dotenv.config();
 
@@ -9,7 +10,7 @@ module.exports = {
             where: {
                 email: req.body.email,
                 username: req.body.username,
-                password: req.body.password
+                password: crypto.createHash('sha256').update(req.body.password).digest('hex')
             }
         })
             .then(([result, created]) => {
