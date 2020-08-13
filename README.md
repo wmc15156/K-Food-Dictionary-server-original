@@ -11,6 +11,7 @@
 
 3. 사용자가 원하는 한국음식을 sns에 공유할 수 있다.
 
+
 # 💡 About 
 
 ## Getting Started
@@ -37,6 +38,7 @@
    
    7. 맛집 리스트 불러오기
       - 해당하는 음식의 맛집들을 볼 수 있다.
+      
   
 ## Step by step 
    1. Bare Minimum Requirement
@@ -54,11 +56,13 @@
    3. Nightmare
       - 맛집 리스트 불러오기
       - tag기능
+      
    
  ## Flow Chart
    <div>
      <img src="https://user-images.githubusercontent.com/59912499/89887350-0ed6dc80-dc09-11ea-8642-3d321f8da8b2.png">
    </div> 
+   
 
 ## 🎨 Server
 
@@ -85,11 +89,13 @@
    -   cookie parser
    -   dotenv
    -   crypto
+   
 
 ## 🗃 Schema
    <div>
 <img width="500" src="https://user-images.githubusercontent.com/60249156/90013882-18cc0e80-dce1-11ea-8afc-38dab1cd11b1.png">
    </div>
+   
 
 ## 🗃 Schema 테이블 구조
 <details>
@@ -103,6 +109,7 @@
      <img src="https://user-images.githubusercontent.com/60249156/90020979-972dae00-dceb-11ea-8286-7bf545ffac13.png">
    </div>
   </details> 
+
 
 ## 🎨 Client
 
