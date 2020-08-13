@@ -6,9 +6,13 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const app = express();
 const PORT = 5000;
-
+const db = require('./models');
 dotenv.config();
-
+db.sequelize.sync()
+  .then(() => {
+    console.log('db 연결 성공');
+  })
+  .catch(console.log('연결실패'));
 app.use(cors());
 app.use(cookieParser(process.env.SESSION_SECRET_KEY));
 app.use(session({
@@ -17,12 +21,16 @@ app.use(session({
   saveUninitialized: false, // saveUninitialized는 세션에 저장할 내역이 없더라도 세션을 저장할지에 대한 설정
 }));
 app.use(logger());
-// app.use(express.json());
-
+app.use(express.json());
 app.get('/', (req, res) => {
   res.send('hello world');
 });
-
 app.listen(PORT, () => {
   console.log(`${PORT}번포트에 연결됨`);
 });
+
+const usersRouter = require('./routes/users');
+// const foodRouter = require('./routes/foods');
+
+app.use('/user', usersRouter);
+// app.use('/food', foodRouter);
