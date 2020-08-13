@@ -1,3 +1,4 @@
 module.exports = {
-    userController: require('./users')
+    userController: require('./users'),
+    // foodRouter: require('./foods')
 };

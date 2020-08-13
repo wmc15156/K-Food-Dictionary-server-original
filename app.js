@@ -31,5 +31,6 @@ app.listen(PORT, () => {
 
 const usersRouter = require('./routes/users');
 // const foodRouter = require('./routes/foods');
+
 app.use('/user', usersRouter);
 // app.use('/food', foodRouter);
