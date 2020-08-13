@@ -37,6 +37,23 @@
    
    7. 맛집 리스트 불러오기
       - 해당하는 음식의 맛집들을 볼 수 있다.
+  
+## Step by step 
+   1. Bare Minimum Requirement
+      - 회원가입
+      - 로그인
+      - 로그아웃
+      - 즐겨찾기에 추가
+      - youtube영상 불러오기
+  
+   2. Advanced
+      - sns계정으로 로그인
+      - 관리자에 의한 음식 업로드
+      - sns에 공유하기
+      
+   3. Nightmare
+      - 맛집 리스트 불러오기
+      - tag기능
    
  ## Flow Chart
    <div>
