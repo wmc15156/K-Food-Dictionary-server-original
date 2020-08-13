@@ -5,26 +5,25 @@ dotenv.config();
 
 module.exports = {
     post: async (req, res) => {
-        User.findOrCreate({
+        User.findOne({
             where: {
                 email: req.body.email,
-                username: req.body.username,
                 password: req.body.password
             }
         })
-            .then(([result, created]) => {
-                if (created) {
-                    res.status(200).send({
-                        id: result.id,
-                        username: result.username,
-                        createdAt: result.createdAt
-                    });
+            .then(data => {
+                if (!data) {
+                    res.status(404).send('unvalid user')
                 } else {
-                    res.status(409).send('Already signed up');
+                    req.session.userid = data.email
+                    res.status(200).send({
+                        id: data.id,
+                        username: data.username
+                    })
                 }
             })
             .catch(error => {
                 res.status(500).send(error);
             })
     }
-}
+};
