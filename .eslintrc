@@ -15,5 +15,7 @@
   "plugins": [
     "import"
   ],
-  "rules": {}
+  "rules": {
+    "no-console": 0
+  }
 }
