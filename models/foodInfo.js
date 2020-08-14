@@ -33,6 +33,10 @@ module.exports = class FoodInfo extends Model {
        type: DataTypes.TEXT,
        allowNull: false,
      }, 
+     foodInfo:{
+       type: DataTypes.TEXT,
+       allowNull: false,
+     },
      video : {
        // 음식 먹방영상 
        // 일단 추가
