@@ -40,8 +40,6 @@ app.get('/', (req, res) => {
   res.send('hello world');
 });
 
-
-
 app.use('/user', usersRouter);
 app.use('/product', foodRouter);
 
