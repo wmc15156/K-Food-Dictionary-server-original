@@ -1,11 +1,9 @@
-// const express = require('express');
-// const router = express.Router();
+const express = require('express');
+const router = express.Router();
+const { productController } = require('../controller');
 
-// router.get('/info', (req, res) => {
-//     console.log('product');
-//     res.send('secces');
-// });
+router.post('/',productController.store.post);
 
-// // router.get('/:productId', (req, res) => ());
+// router.get('/:productId', (req, res) => ());
 
-// module.exports = router;
+module.exports = router;
