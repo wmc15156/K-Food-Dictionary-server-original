@@ -10,7 +10,8 @@ module.exports = {
             where: {
                 email: req.body.email,
                 username: req.body.username,
-                password: crypto.createHash('sha256').update(req.body.password).digest('hex')
+                password: crypto.createHash('sha256').update(req.body.password).digest('hex'),
+                mobile: req.body.mobile
             }
         })
             .then(([result, created]) => {
@@ -25,6 +26,7 @@ module.exports = {
                 }
             })
             .catch(error => {
+                console.log(error);
                 res.status(500).send(error);
             })
     }
