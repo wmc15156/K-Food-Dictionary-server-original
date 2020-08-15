@@ -26,12 +26,10 @@ db.sequelize.sync()
     console.log('db 연결 성공');
   })
   .catch(console.log('연결실패'));
-
 app.use(cors({
   origin:["http://localhost:3100","http://localhost:3000"],
   credentials: true,
 }));
-
 app.use(cookieParser(process.env.SESSION_SECRET_KEY));
 app.use(session({
   secret: process.env.SESSION_SECRET_KEY,
