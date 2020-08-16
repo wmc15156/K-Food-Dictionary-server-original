@@ -4,12 +4,18 @@ const cors = require('cors');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const path = require('path');
+const passport = require('passport');
+
 
 const usersRouter = require('./routes/users');
 const foodRouter = require('./routes/products');
 const db = require('./models');
+const authRouter = require('./routes/auth');
+const passportConfig = require('./passport');
 
 const app = express();
+passportConfig();
 const PORT = process.env.NODE_ENV || 5000;
 
 
@@ -21,8 +27,8 @@ db.sequelize.sync()
   })
   .catch(console.log('연결실패'));
 app.use(cors({
-  origin: 'http//localhost:3000',
-  credentials: true
+  origin:["http://localhost:3100","http://localhost:3000"],
+  credentials: true,
 }));
 app.use(cookieParser(process.env.SESSION_SECRET_KEY));
 app.use(session({
@@ -31,15 +37,24 @@ app.use(session({
   saveUninitialized: false, // saveUninitialized는 세션에 저장할 내역이 없더라도 세션을 저장할지에 대한 설정
 }));
 
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use(logger());
 app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.send('hello world');
+app.use('/',express.static(path.join(__dirname,'uploads')))
+
+app.get('/check', (req, res) => {
+  res.clearCookie('user')
+  console.log('여기',req.headers)
+
+  res.end();
 });
 
 app.use('/user', usersRouter);
 app.use('/product', foodRouter);
+app.use('/auth', authRouter); // authRoter
 
 app.listen(PORT, () => {
   console.log(`${PORT}번포트에 연결됨`);

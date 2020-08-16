@@ -13,18 +13,25 @@ module.exports = class User extends Model {
         type: DataTypes.STRING(30),
       },
       email: {
-        type: DataTypes.STRING(30), //
+        type: DataTypes.STRING(60), //
         allowNull: false, // 필수
         unique: true, // 고유한 값
       },
       password: {
-        type: DataTypes.STRING(100),
-        allowNull: false, // 필수
+        type: DataTypes.STRING(200),
       },
       avatar: {
         type: DataTypes.TEXT,
+      },
+      snsId: {
+        type: DataTypes.STRING(60)
+      },
+      provider: {
+        type: DataTypes.STRING(60)
       }
-    }, {
+    }, 
+   
+    {
       modelName: 'User',
       tableName: 'users',
       charset: 'utf8',
