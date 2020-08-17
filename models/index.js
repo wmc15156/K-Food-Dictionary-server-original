@@ -3,7 +3,7 @@ const Sequelize = require('sequelize');
 const env = process.env.NODE_ENV || 'development';
 const config = require(__dirname + '/../config/config.js')[env];
 const user = require('./user');
-const foodInfo = require('./foodInfo');
+const foodinfo = require('./foodinfo');
 const db = {};
 let sequelize;
 if (config.use_env_variable) {
@@ -21,7 +21,9 @@ if (config.use_env_variable) {
 //     db[model.name] = model;
 //   });
 db.User = user;
-db.FoodInfo = foodInfo;
+db.FoodInfo = foodinfo;
+
+
 Object.keys(db).forEach(modelName => {
   db[modelName].init(sequelize);
 });
