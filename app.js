@@ -6,7 +6,8 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const path = require('path');
 const passport = require('passport');
-
+const redis = require('redis');
+const RedisStore = require('connect-redis')(session);
 
 const usersRouter = require('./routes/users');
 const foodRouter = require('./routes/products');
@@ -19,7 +20,6 @@ passportConfig();
 const PORT = process.env.NODE_ENV || 5000;
 
 
-
 dotenv.config();
 db.sequelize.sync()
   .then(() => {
@@ -30,11 +30,18 @@ app.use(cors({
   origin:["http://localhost:3100","http://localhost:3000"],
   credentials: true,
 }));
+
+const redisClient = redis.createClient({
+  url: `redis://${process.env.REDIS_HOST}:${process.env.REDIS_PORT}`,
+  password: process.env.REDIS_PASSWORD
+})
+
 app.use(cookieParser());
 app.use(session({
   secret: process.env.SESSION_SECRET_KEY,
   resave: false, // resave는 요청이 왔을 때 세션에 수정 사항이 생기지 않더라도 세션을 다시 저장할지에 대한 설정
   saveUninitialized: false, // saveUninitialized는 세션에 저장할 내역이 없더라도 세션을 저장할지에 대한 설정
+  store: new RedisStore({ client: redisClient})
 }));
 
 app.use(passport.initialize());

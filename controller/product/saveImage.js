@@ -29,7 +29,7 @@ module.exports = {
     try {
       upload(req, res, err => {
         if (err) {
-          return req.json({ success: false, err })
+          return res.json({ success: false, err })
         } else {
           return res.json({ success: true, filePath: res.req.file.path, fileName: req.file.location })
         }
