@@ -11,19 +11,6 @@ AWS.config.update({
   region: 'ap-northeast-2'
 })
 
-// var storage = multer.diskStorage({
-//   destination: function (req, file, cb) {
-//     cb(null, 'uploads/')
-//   },
-//   filename: function (req, file, cb) {
-//     const ext = path.extname(file.originalname) // 확장자 
-//     const basename = path.basename(file.originalname, ext)
-//     cb(null, `${basename} ${new Date().getTime()}${ext}`) // 파일명
-//   }
-// })
-
-
-// var upload = multer({ storage: storage }).single("file")
 
 const upload = multer({
   storage: multerS3({
@@ -54,3 +41,18 @@ module.exports = {
 
   }
 }
+
+// 서버에 이미지 저장방법
+// var storage = multer.diskStorage({
+//   destination: function (req, file, cb) {
+//     cb(null, 'uploads/')
+//   },
+//   filename: function (req, file, cb) {
+//     const ext = path.extname(file.originalname) // 확장자 
+//     const basename = path.basename(file.originalname, ext)
+//     cb(null, `${basename} ${new Date().getTime()}${ext}`) // 파일명
+//   }
+// })
+
+
+// var upload = multer({ storage: storage }).single("file")
