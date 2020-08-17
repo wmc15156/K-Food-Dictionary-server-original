@@ -11,16 +11,16 @@ router.get('/google',
 
 router.get('/google/callback', (req, res, next) => {
   passport.authenticate('google', (authError, user, info) => {
-    console.log(user)
+    
+    req.session.userid = user.dataValues.email
+    console.log(user);
     res.cookie('user', user.dataValues.username);
     res.redirect(`http://localhost:3100`);
-    req.login(user)
-    // return req.login(user, async (loginErr) => {
-    //   if (loginErr) {
-    //     console.error(loginErr);
-    //   }
-    //   return res.end();
-    // })
+    req.login(user,(err) => {
+      if(err) {
+        res.status(404).send('구글로그인 에러');
+      }
+    })
   })(req, res, next)
 })
 

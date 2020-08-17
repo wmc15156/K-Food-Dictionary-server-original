@@ -19,6 +19,7 @@
   "homepage": "https://github.com/wmc15156/K-Food-Dictionary-server#readme",
   "dependencies": {
     "aws-sdk": "^2.734.0",
+    "connect-redis": "^5.0.0",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "crypto-js": "^4.0.0",
@@ -32,6 +33,7 @@
     "passport": "^0.4.1",
     "passport-google-oauth": "^2.0.0",
     "passport-kakao": "^1.0.0",
+    "redis": "^3.0.2",
     "sequelize": "^6.3.4",
     "utf8": "^3.0.0"
   },
