@@ -2,6 +2,23 @@ const DataTypes = require('sequelize');
 const { Model } = DataTypes;
 
 module.exports = class FoodInfo extends Model {
+  // static init(sequelize) {
+  //   // return super.init({
+  //   //   // id가 기본적으로 들어있다.
+  //   //   content: {
+  //   //     type: DataTypes.TEXT,
+  //   //     allowNull: false,
+  //   //   },
+  //   //   // RetweetId
+  //   // }, {
+  //   //   modelName: 'Foodna',
+  //   //   tableName: 'posts',
+  //   //   charset: 'utf8mb4',
+  //   //   collate: 'utf8mb4_general_ci', // 이모티콘 저장
+  //   //   sequelize,
+  //   // });
+  // }
+
   static init(sequelize) {
     return super.init({
       // id가 기본적으로 들어있다.
@@ -54,7 +71,36 @@ module.exports = class FoodInfo extends Model {
       sequelize,
     });
   }
+  // static associate(db) {
+  //   db.FoodInfo.belongsToMany(db.User, {through: 'User_FoodInfo', as:'Liker'});
+  // }
   static associate(db) {
-    db.FoodInfo.belongsToMany(db.User, {through: 'User_FoodInfo'});
+    db.FoodInfo.belongsToMany(db.User, { through: 'Like', as: 'Infos' }) // post.addLikers, post.removeLikers
   }
+
 };
+
+// const DataTypes = require('sequelize');
+// const { Model } = DataTypes;
+
+// module.exports = class Post extends Model {
+//   static init(sequelize) {
+//     return super.init({
+//       // id가 기본적으로 들어있다.
+//       content: {
+//         type: DataTypes.TEXT,
+//         allowNull: false,
+//       },
+//       // RetweetId
+//     }, {
+//       modelName: 'Post',
+//       tableName: 'posts',
+//       charset: 'utf8mb4',
+//       collate: 'utf8mb4_general_ci', // 이모티콘 저장
+//       sequelize,
+//     });
+//   }
+//   static associate(db) {
+//     db.Post.belongsToMany(db.User, { through: 'Like', as: 'Likers',onDelete: 'cascade' }) // post.addLikers, post.removeLikers
+//   }
+// };

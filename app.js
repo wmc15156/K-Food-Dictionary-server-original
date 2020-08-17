@@ -30,7 +30,7 @@ app.use(cors({
   origin:["http://localhost:3100","http://localhost:3000"],
   credentials: true,
 }));
-app.use(cookieParser(process.env.SESSION_SECRET_KEY));
+app.use(cookieParser());
 app.use(session({
   secret: process.env.SESSION_SECRET_KEY,
   resave: false, // resave는 요청이 왔을 때 세션에 수정 사항이 생기지 않더라도 세션을 다시 저장할지에 대한 설정
@@ -45,11 +45,8 @@ app.use(express.json());
 
 app.use('/',express.static(path.join(__dirname,'uploads')))
 
-app.get('/check', (req, res) => {
-  res.clearCookie('user')
-  console.log('여기',req.headers)
-
-  res.end();
+app.get('/', (req, res) => {
+  res.send('success response');
 });
 
 app.use('/user', usersRouter);
