@@ -1,6 +1,6 @@
 const { User, FoodInfo } = require('../../models');
 const dotenv = require('dotenv');
-
+const jwt = require('jsonwebtoken');
 dotenv.config();
 
 module.exports = {
@@ -9,13 +9,14 @@ module.exports = {
   post: async (req, res) => {
     try {
       // session에서 해당사용자 불러오기 // 이메일로 세션에 저장됨
-      const { userid } = req.session;
+      let token = req.headers.authorization;
+      let { email } = jwt.verify(token, 'qlalfdldi');
       const { productId } = req.params;
       
       // 데이터베이스에서 클라이언트에서 받은 데이터 찾기
       // 해당 user찾기
       const oneUser = await User.findOne({
-        where: {email : userid}
+        where: {email : email}
       });
 
       // req.parmas로 받은데이터를 가지고 데이터베이스에서 찾기

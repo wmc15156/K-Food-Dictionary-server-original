@@ -9,8 +9,8 @@ module.exports = {
     console.log(req.headers.authorization,'여기')
     
     try {
-      let token = req.headers.authorization;
-      let { email } = jwt.verify(token, 'qlalfdldi');
+      let token = req.headers.authorization; // 토큰
+      let { email } = jwt.verify(token, 'qlalfdldi'); // {email: wmc15156@naver.com}
       console.log('-----------------------',email,'------------------------------');
       if (email) {
         User.findOne({
@@ -56,7 +56,7 @@ module.exports = {
     } catch (e) {
       console.error(e);
       if(e.name === 'TokenExpiredError') {
-        return res.status.json({
+        return res.status(419).json({
           code: 419,
           message: '토큰이 만료되었습니다.'
         })
