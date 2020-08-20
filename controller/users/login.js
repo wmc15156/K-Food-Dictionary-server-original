@@ -13,8 +13,8 @@ module.exports = {
       let token = jwt.sign({
         // email : email = email => 키와벨류값이 같으면 email로 생략가능 ES6문법 // .env 'qlalfdldi'
         email
-      }, 'qlalfdldi', {
-        expiresIn: '20m'
+      }, process.env.JWT_SECRET, {
+        expiresIn: '50m'
       });
 
       const oneUser = await User.findOne({
