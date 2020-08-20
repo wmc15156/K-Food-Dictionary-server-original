@@ -6,12 +6,15 @@ dotenv.config();
 
 module.exports = {
   get: (req, res) => {
-    console.log(req.headers.authorization,'여기')
-    
+    let email;
     try {
       let token = req.headers.authorization; // 토큰
-      let { email } = jwt.verify(token, 'qlalfdldi'); // {email: wmc15156@naver.com}
-      console.log('-----------------------',email,'------------------------------');
+      if (token.length < 35) {
+        email = req.headers.authorization
+      } else {
+        email = jwt.verify(token, process.env.JWT_SECRET); // {email: wmc15156@naver.com};
+        email = email.email;
+      }
       if (email) {
         User.findOne({
           where: {
@@ -24,12 +27,13 @@ module.exports = {
           }],
         })
           .then(result => {
-            console.log(result,'then문');
+            console.log(result, 'then문');
             let arr = [];
 
-            result.Liked.forEach((v,i) => {
+            result.Liked.forEach((v, i) => {
+              console.log('=========',v.dataValues,'-==-=-=-=-=-=--==-');
               const obj = {};
-              if(i === 0) {
+              if (i === 0) {
                 const userInfo = {};
                 userInfo.username = result.dataValues.username;
                 userInfo.email = result.dataValues.email;
@@ -40,12 +44,13 @@ module.exports = {
               obj.spicy = v.dataValues.spicy;
               obj.image = v.dataValues.image;
               obj.foodInfo = v.dataValues.foodInfo
+              obj.sort =v.dataValues.sort
               arr.push(obj);
             });
-            console.log(arr,'--------------');
-            if(arr.length === 0) {
-              const { username, email} = result
-              return res.status(200).send({success: true, username: username, email:email})
+            console.log(arr, '--------------');
+            if (arr.length === 0) {
+              const { username, email } = result
+              return res.status(200).send({ success: true, username: username, email: email })
             } else {
               return res.status(200).send(arr);
             }
@@ -55,7 +60,7 @@ module.exports = {
       }
     } catch (e) {
       console.error(e);
-      if(e.name === 'TokenExpiredError') {
+      if (e.name === 'TokenExpiredError') {
         return res.status(419).json({
           code: 419,
           message: '토큰이 만료되었습니다.'
